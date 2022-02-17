@@ -6,9 +6,8 @@ import { useGlobalState } from "../context";
 import { LoadingOutlined } from "@ant-design/icons";
 import styled from "styled-components";
 
-// Import Bip39 to convert a phrase to a seed:
-
-// Import the Keypair class from Solana's web3.js library:
+import * as Bip39 from "bip39";
+import { Keypair } from "@solana/web3.js";
 
 const Recover: NextPage = () => {
   const [loading, setLoading] = useState<boolean>(false);
@@ -25,16 +24,15 @@ const Recover: NextPage = () => {
     const inputMnemonic = values.phrase.trim().toLowerCase();
     setMnemonic(inputMnemonic);
 
-    // (a) review the import guidance on lines 9 and 11
-    // (b) convert the mnemonic to seed bytes
-    // Documentation Reference: https://github.com/bitcoinjs/bip39
-    const seed = new Uint8Array();
+    const seed = Bip39.mnemonicToSeedSync(inputMnemonic).slice(0, 32);
+    console.log(seed);
 
     // (c) use the seed to import the account (i.e. keypair)
     // Documentation Reference:
     //   https://solana-labs.github.io/solana-web3.js/classes/Keypair.html
     //   https://solana-labs.github.io/solana-web3.js/classes/Keypair.html#fromSeed
-    const importedAccount = null;
+    const importedAccount = Keypair.fromSeed(seed);
+    console.log(importedAccount);
     setAccount(importedAccount);
 
     // (d) You can now delete the console.log statement since the function is implemented!
