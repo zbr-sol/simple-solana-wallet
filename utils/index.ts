@@ -1,31 +1,18 @@
-// Import any additional classes and/or functions needed from Solana's web3.js library as you go along:
-import { Cluster, Keypair } from "@solana/web3.js";
+import { Cluster, Keypair, Connection, clusterApiUrl } from "@solana/web3.js";
 import { message } from "antd";
 
-// *Step 3*: implement a function that gets an account's balance
+// implement a function that gets an account's balance
 const refreshBalance = async (network: Cluster | undefined, account: Keypair | null) => {
   // This line ensures the function returns before running if no account has been set
   if (!account) return 0;
 
   try {
-    // (a) review the import guidance on line 1
-    // (b) instantiate a connection using clusterApiUrl with the active network passed in as an argument
-    // Documentation References:
-    //   https://solana-labs.github.io/solana-web3.js/classes/Connection.html
-    //   https://solana-labs.github.io/solana-web3.js/modules.html#clusterApiUrl
-    console.log("Balance functionality not implemented yet!");
-    const connection = "";
+    const connection = new Connection(clusterApiUrl(network), "confirmed");
 
-    // (c) get the key using one of the accessors on the account passed in as an argument
-    // Documentation Reference: https://solana-labs.github.io/solana-web3.js/classes/Keypair.html
-    const publicKey = "";
-
-    // (d) get the account's balance using the connection instance
-    // Documentation Reference: https://solana-labs.github.io/solana-web3.js/classes/Connection.html
-    const balance = 0;
+    const publicKey = account.publicKey;
+    const balance = await connection.getBalance(publicKey);
 
     return balance;
-    // (e) You can now delete the console.log statement since the function is implemented!
   } catch (error) {
     const errorMessage =
       error instanceof Error ? error.message : "Unknown Error";
