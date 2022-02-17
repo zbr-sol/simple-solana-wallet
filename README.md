@@ -1,4 +1,4 @@
-# Wallet Tutorial
+# Simple Solana Wallet Implementation
 This is an extremely simple implementation of a wallet for the [Solana](https://solana.com/) protocol. Figment (more details below) provided a simple [Next.js](https://nextjs.org/) application that I completed by leveraging Solana's [JavaScript SDK](https://solana-labs.github.io/solana-web3.js/index.html).
 
 If you follow my commit history, you can see that we built this wallet in a few discrete steps:
