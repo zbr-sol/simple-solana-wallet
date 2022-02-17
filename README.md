@@ -1,5 +1,12 @@
 # Wallet Tutorial
-In this tutorial, you'll learn to develop a wallet for the [Solana](https://solana.com/) protocol. We will provide a simple [Next.js](https://nextjs.org/) application that you will complete by leveraging Solana's [JavaScript SDK](https://solana-labs.github.io/solana-web3.js/index.html). In the process, you'll dive into key concepts relevant to Web 3 and start to cultivate an understanding for what it takes to build decentralized applications (dApps).
+This is an extremely simple implementation of a wallet for the [Solana](https://solana.com/) protocol. Figment (more details below) provided a simple [Next.js](https://nextjs.org/) application that I completed by leveraging Solana's [JavaScript SDK](https://solana-labs.github.io/solana-web3.js/index.html).
+
+If you follow my commit history, you can see that we built this wallet in a few discrete steps:
+1. Create the wallet by generating a mnemonic device and converting it to seed bytes. We can then create a new "account" using this seed.  
+2. Be able to fetch the SOL balance from this wallet address
+3. Request an airdrop of 1 SOL to this address from a devnet "faucet"
+4. Be able to send/transfer funds to any other wallet address
+5. Log out and "recover" an account by importing the seed/recovery phrase generated in step 1
 
 ![](./public/wallet-tutorial-screenshot.png)
 
@@ -7,43 +14,9 @@ In this tutorial, you'll learn to develop a wallet for the [Solana](https://sola
 
 Crypto wallets are one of the foundations of Web 3. They are the gateway application into crypto ecosystems by enabling users to interact with blockchain protocols and manage digital assets.
 
-Under the hood, wallets leverage cryptographic technologies to generate and recover private keys - a concept that we'll define in the course of this tutorial. Those private keys give users access to public accounts that record ownership on a blockchain and expand the internet's functionality from a global network for information exchange to a global network for disintermediated economic exchange.
-
-## 🧑‍💻 Getting started
-There are no formal blockchain or Web 3 prerequisites for this tutorial, but you should have some experience with [TypeScript](https://www.typescriptlang.org/) and [React](https://reactjs.org/). Having said that, you can certainly complete the tutorial if you at least know basic [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript). You might just find it more difficult to follow the app's pre-built functionality. 
-
-Make sure you have [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git), [Node](https://nodejs.org/en/) and [yarn](https://yarnpkg.com/getting-started/install) installed. Then clone the repo and run the `yarn` command to install the app dependencies:
-
-```
-git clone https://github.com/figment-networks/wallet-tutorial.git
-cd wallet-tutorial
-yarn
-```
-
-If you encounter any errors during this process, please join our [Discord](https://discord.gg/fszyM7K) for help.
-
-## 💻 Running the development server
-Start the Next.js development server on the default port 3000 with:
-
-```
-yarn dev
-```
-
-> Alternatively, run `yarn dev -p 8080` or any port other than `8080` to start the server in a different port.
-
-Once the server is running, you should see output that looks like this:
-
-```
-yarn run v1.22.11
-$ next dev
-ready - started server on 0.0.0.0:3000, url: http://localhost:3000
-info  - Using webpack 5. Reason: Enabled by default https://nextjs.org/docs/messages/webpack5
-event - compiled successfully
-```
-
-You can now view the running application at [http://localhost:3000](http://localhost:3000)
-
 ## 🔩 Designed by Figment Learn
+*NOTE - all of the front-end code was provided from a tutorial built by the Figment team. Copying their original github message below:
+*
 Our goal at [Figment Learn](https://learn.figment.io/) is to build the best resources for developers learning about and building in Web 3. We really hope you enjoy the tutorial and thanks for checking it out. **WAGMI!**
 
 Learn more about [Figment](https://figment.io/) and [Figment Learn](https://learn.figment.io/).
