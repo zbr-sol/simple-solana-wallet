@@ -15,8 +15,7 @@ If you follow my commit history, you can see that we built this wallet in a few 
 Crypto wallets are one of the foundations of Web 3. They are the gateway application into crypto ecosystems by enabling users to interact with blockchain protocols and manage digital assets.
 
 ## 🔩 Designed by Figment Learn
-*NOTE - all of the front-end code was provided from a tutorial built by the Figment team. Copying their original github message below:
-*
+*NOTE - all of the front-end code was provided from a tutorial built by the Figment team. Copying their original github message below:*
 Our goal at [Figment Learn](https://learn.figment.io/) is to build the best resources for developers learning about and building in Web 3. We really hope you enjoy the tutorial and thanks for checking it out. **WAGMI!**
 
 Learn more about [Figment](https://figment.io/) and [Figment Learn](https://learn.figment.io/).
