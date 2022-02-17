@@ -1,6 +1,7 @@
 # Simple Solana Wallet Implementation
 This is an extremely simple implementation of a wallet for the [Solana](https://solana.com/) protocol. Figment (more details below) provided a simple [Next.js](https://nextjs.org/) application that I completed by leveraging Solana's [JavaScript SDK](https://solana-labs.github.io/solana-web3.js/index.html).
 
+***You can view the live version of this [here](https://simple-solana-wallet.vercel.app/)***
 If you follow my commit history, you can see that we built this wallet in a few discrete steps:
 1. Create the wallet by generating a mnemonic device and converting it to seed bytes. We can then create a new "account" using this seed.  
 2. Be able to fetch the SOL balance from this wallet address
