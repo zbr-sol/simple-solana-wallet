@@ -6,7 +6,7 @@ import { useGlobalState } from "../context";
 import { LoadingOutlined } from "@ant-design/icons";
 import { useRouter } from "next/router";
 
-// Import Bip39 to generate a phrase and convert it to a seed:
+import * as Bip39 from "bip39";
 
 // Import the Keypair class from Solana's web3.js library:
 
